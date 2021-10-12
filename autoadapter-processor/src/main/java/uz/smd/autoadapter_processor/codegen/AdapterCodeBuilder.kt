@@ -77,7 +77,7 @@ class AdapterCodeBuilder(private val adapterName: String, private val data: Mode
         data.viewHolderBindingData.forEach {
 
 
-          addStatement("",
+          addStatement("itemView.findViewById<%T>(%L).text = item.%L()",
               textViewClassName, it.viewId, it.paramName)
         }
       }

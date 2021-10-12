@@ -2,6 +2,7 @@ package uz.smd.myanotationprocessor
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,5 +12,6 @@ class MainActivity : AppCompatActivity() {
             Person("Big Bird", "123 Seasame Street"),
             Person("Kermit the Frog", "6801 Hollywood Blvd.")
         ))
+        findViewById<RecyclerView>(R.id.recyclerView).adapter=adapter
     }
 }
